@@ -23,6 +23,8 @@ install_docker () {
 
 #menu
 
+tput clear
+tput bold
 echo
 echo "Ubuntu Init Menu"
 echo
@@ -30,6 +32,7 @@ echo "1 Update and Upgrade the system"
 echo "2 Update and Upgrade the system and install Docker"
 echo "3 Install Docker"
 echo "9 Exit"
+tput sgr0
 
 read menuchoice
 
