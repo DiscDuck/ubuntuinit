@@ -1,0 +1,20 @@
+version: "2.1"
+
+services:
+  plex:
+    image: lscr.io/linuxserver/plex
+    container_name: plex
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /opt/appdata/plex/config:/config
+      - /opt/appdata/plex/transcode:/transcode
+      - /opt/appdata/plex/data:/data
+    environment:
+      - TZ=EUROPE/BERLIN
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+#      - PLEX_CLAIM= #optional
