@@ -5,7 +5,7 @@ services:
     image: lscr.io/linuxserver/plex
     container_name: plex
     restart: unless-stopped
-    network_mode: host
+    network_mode: bridge
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
