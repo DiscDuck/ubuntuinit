@@ -18,3 +18,5 @@ services:
       - PGID=1000
       - VERSION=docker
 #      - PLEX_CLAIM= #optional
+    ports:
+      - 32400:32400
